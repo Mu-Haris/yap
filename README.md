@@ -1,8 +1,8 @@
-# yap.
+# Yappi.
 
 > finally fluent in whatever they're saying
 
-GitHub Pages site for **yap.** — a soft, slow-living Gen Z slang learning iOS app published by [Kinex Apps](https://kinexapps.com/).
+GitHub Pages site for **Yappi.** — a soft, slow-living Gen Z slang learning iOS app published by [Kinex Apps](https://kinexapps.com/).
 
 Published at: **https://mu-haris.github.io/yap/**
 
