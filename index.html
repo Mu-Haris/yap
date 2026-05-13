@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>yap. — finally fluent in whatever they're saying</title>
+<meta name="description" content="one slang word a day. soft on the brain. tender on the streak. yap. is a Gen Z slang learning app built with care.">
+<meta name="theme-color" content="#B19BFF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ECE3FF;
+    --bg-deep: #FDD9D2;
+    --surface: #FFFFFF;
+    --primary: #B19BFF;
+    --primary-deep: #8A6FF0;
+    --primary-shine: #DDCEFF;
+    --accent: #FFD3CB;
+    --ink: #2B1740;
+    --ink-soft: #6A5786;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(circle at 15% 10%, #FFE0D9 0%, transparent 45%),
+      radial-gradient(circle at 85% 80%, #D4E3FF 0%, transparent 45%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+    text-align: center;
+  }
+  h1 {
+    font-family: 'Bricolage Grotesque', system-ui;
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 24px 0 8px;
+    color: var(--ink);
+  }
+  h1 .dot { color: var(--primary); }
+  .tagline {
+    font-family: 'Bricolage Grotesque', system-ui;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+    max-width: 480px;
+    margin: 0 auto 12px;
+  }
+  .tagline em { color: var(--primary-deep); font-style: italic; }
+  .sub {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--ink-soft);
+    max-width: 360px;
+    margin: 0 auto 36px;
+    line-height: 1.5;
+  }
+  .orb {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: radial-gradient(circle at 32% 28%, var(--primary-shine), var(--primary) 55%, var(--primary-deep));
+    box-shadow:
+      0 4px 0 rgba(255,255,255,0.55) inset,
+      0 -22px 36px rgba(0,0,0,0.20) inset,
+      0 18px 36px -8px rgba(138,111,240,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: breathe 4s ease-in-out infinite;
+  }
+  .orb::after {
+    content: '';
+    position: absolute;
+    top: 22px; left: 36px;
+    width: 50px; height: 30px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    filter: blur(6px);
+  }
+  .orb span {
+    font-family: 'Bricolage Grotesque', system-ui;
+    font-weight: 800;
+    font-size: 44px;
+    color: #fff;
+    letter-spacing: -2px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+  }
+
+  .card {
+    background: var(--surface);
+    border-radius: 32px;
+    padding: 36px 28px;
+    margin-top: 40px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.95) inset,
+      0 -4px 14px rgba(0,0,0,0.04) inset,
+      0 16px 40px -10px rgba(43,23,64,0.18);
+  }
+  .card h2 {
+    font-family: 'Bricolage Grotesque', system-ui;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.7px;
+    margin: 0 0 6px;
+  }
+  .card .sub-small {
+    color: var(--ink-soft);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 22px;
+  }
+  .qr {
+    display: inline-block;
+    padding: 14px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.85) inset,
+      0 0 0 3px var(--primary-shine),
+      0 10px 28px -6px rgba(138,111,240,0.35);
+  }
+  .qr img {
+    display: block;
+    width: 220px;
+    height: 220px;
+    border-radius: 8px;
+  }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    padding: 14px 26px;
+    background: var(--ink);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 999px;
+    font-family: 'Nunito', system-ui;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: -0.1px;
+    box-shadow:
+      0 2px 0 rgba(255,255,255,0.25) inset,
+      0 -4px 10px rgba(0,0,0,0.30) inset,
+      0 10px 22px -8px rgba(43,23,64,0.45);
+    transition: transform 0.15s ease;
+  }
+  .cta:hover { transform: translateY(-2px); }
+  .cta .apple { font-size: 18px; }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-top: 40px;
+    text-align: left;
+  }
+  .feature {
+    background: rgba(255,255,255,0.6);
+    padding: 16px 18px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+  }
+  .feature .icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    background: radial-gradient(circle at 30% 25%, var(--primary-shine), var(--primary));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito';
+    font-weight: 900;
+    margin-bottom: 10px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.5) inset,
+      0 -3px 6px rgba(0,0,0,0.15) inset;
+  }
+  .feature .title {
+    font-family: 'Bricolage Grotesque', system-ui;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.3px;
+    margin-bottom: 2px;
+  }
+  .feature .desc {
+    font-size: 12px;
+    color: var(--ink-soft);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(43,23,64,0.08);
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  footer a {
+    color: var(--primary-deep);
+    text-decoration: none;
+    font-weight: 800;
+    margin: 0 10px;
+  }
+  footer a:hover { text-decoration: underline; }
+  .made {
+    margin-top: 14px;
+    font-size: 12px;
+    opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="orb"><span>y</span></div>
+  <h1>yap<span class="dot">.</span></h1>
+  <p class="tagline">finally fluent in <em>whatever they're saying</em></p>
+  <p class="sub">one slang word a day. soft on the brain. tender on the streak.</p>
+
+  <div class="card">
+    <h2>scan to open in the App Store ✿</h2>
+    <p class="sub-small">point your camera at the code below</p>
+    <div class="qr">
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=440x440&margin=8&color=2B1740&bgcolor=FFFFFF&data=https%3A%2F%2Fapps.apple.com%2Fapp%2Fyap"
+        alt="QR code to download yap. on the App Store">
+    </div>
+    <br>
+    <!-- Update the href below once you have your real App Store URL -->
+    <a class="cta" href="https://apps.apple.com/app/yap" target="_blank" rel="noopener">
+      <span class="apple"></span> Download on the App Store
+    </a>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <div class="icon">✿</div>
+      <div class="title">one word a day</div>
+      <div class="desc">small steps, big vocab. no overwhelm.</div>
+    </div>
+    <div class="feature">
+      <div class="icon">◐</div>
+      <div class="title">tender practice</div>
+      <div class="desc">soft quizzes, generous streaks, real examples.</div>
+    </div>
+    <div class="feature">
+      <div class="icon">♡</div>
+      <div class="title">made with care</div>
+      <div class="desc">built by humans, not bots. ad-free option, $1.99.</div>
+    </div>
+  </div>
+
+  <footer>
+    <div>
+      <a href="privacy.html">privacy</a> ·
+      <a href="terms.html">terms</a> ·
+      <a href="support.html">support</a> ·
+      <a href="https://kinexapps.com/" target="_blank" rel="noopener">developer</a>
+    </div>
+    <p class="made">© 2026 Kinex Apps · made with care, in lowercase ✿</p>
+  </footer>
+</div>
+</body>
+</html>
