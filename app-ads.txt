@@ -1,12 +1,1 @@
-# AdMob app-ads.txt for Yappi.
-#
-# REPLACE the publisher ID below with your real AdMob publisher ID
-# (find it in AdMob console → Settings → Account information → Publisher ID,
-# in the form "pub-XXXXXXXXXXXXXXXX").
-#
-# Once this file is live at https://mu-haris.github.io/yap/app-ads.txt
-# AND your App Store Connect "Marketing URL" (or "Privacy Policy URL"
-# on the same domain) points to mu-haris.github.io/yap, AdMob will
-# crawl this file within ~24 hours and mark your app as verified.
-#
-google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-8234392075217497, DIRECT, f08c47fec0942fa0
